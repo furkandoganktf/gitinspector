@@ -1,4 +1,4 @@
-# coding: utf-8
+# encoding: utf-8
 #
 # Copyright © 2012-2017 Ejwa Software. All rights reserved.
 #
@@ -27,6 +27,10 @@ import threading
 from .localization import N_
 from .changes import FileDiff
 from . import comment, extensions, filtering, format, interval, terminal
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 NUM_THREADS = multiprocessing.cpu_count()
 
